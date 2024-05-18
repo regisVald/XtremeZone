@@ -1,0 +1,23 @@
+﻿@model IEnumerable<XtremeZone.Models.Producto>
+
+@{
+    ViewData["Title"] = "Producto";
+}
+
+<h1>Productos</h1>
+
+<div class="row">
+    @foreach (var producto in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@Url.Content("~/imagenes/" + producto.ImagenUrl)" class="card-img-top" alt="Producto">
+                <div class="card-body">
+                    <h5 class="card-title">@producto.Nombre</h5>
+                    <p class="card-text">Precio: @producto.Precio</p>
+                    <p class="card-text">Stock: @producto.Stock</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

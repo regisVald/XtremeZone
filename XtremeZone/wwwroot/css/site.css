@@ -18,5 +18,13 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-top: 20px;
 }
