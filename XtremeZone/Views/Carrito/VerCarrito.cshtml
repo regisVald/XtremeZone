@@ -1,0 +1,45 @@
+﻿@model XtremeZone.Models.CarritoViewModel
+
+@{
+    ViewData["Title"] = "Carrito de Compras";
+}
+
+<h1>Carrito de Compras</h1>
+
+@if (!Model.Items.Any())
+{
+    <p>El carrito está vacío.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.producto.Nombre</td>
+                    <td>@item.producto.Precio.ToString("C")</td>
+                    <td>@item.Cantidad</td>
+                    <td>
+                        @{
+                            decimal total = item.producto.Precio * item.Cantidad;
+                            string totalFormateado = total.ToString("C");
+                            @totalFormateado
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3>Total: @Model.Total.ToString("C")</h3>
+    <a href="/Producto/Index" class="btn btn-primary">Seguir Comprando</a>
+    <a href="/Compra/Checkout" class="btn btn-success">Proceder al Pago</a>
+}

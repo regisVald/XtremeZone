@@ -6,6 +6,7 @@ namespace XtremeZone.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public bool Estado { get; set; }
         public decimal Precio { get; set; }
         public int Stock { get; set; }
         public string ImagenUrl { get; set; }
@@ -14,7 +15,6 @@ namespace XtremeZone.Models
         public int CategoriaId { get; set; }
 
         // Navigation property
-        [ForeignKey("CategoriaId")]
         public Categoria Categoria { get; set; }
 
         public DateTime FechaCreacion { get; set; }
