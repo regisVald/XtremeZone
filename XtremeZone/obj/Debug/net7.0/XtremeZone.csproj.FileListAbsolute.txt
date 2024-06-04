@@ -62,10 +62,15 @@ C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\sta
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\scopedcss\bundle\XtremeZone.styles.css
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\scopedcss\projectbundle\XtremeZone.bundle.scp.css
-C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\XtremeZone.csproj.CopyComplete
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\XtremeZone.dll
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\refint\XtremeZone.dll
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\XtremeZone.pdb
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\XtremeZone.genruntimeconfig.cache
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\ref\XtremeZone.dll
 C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\Humanizer.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\obj\Debug\net7.0\XtremeZone.csproj.CopyComplete

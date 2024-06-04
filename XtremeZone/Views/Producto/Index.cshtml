@@ -4,57 +4,60 @@
     ViewData["Title"] = "Productos";
 }
 
-<h1>Productos</h1>
+<div class="container">
+    <h1 class="mt-4">Productos</h1>
 
-<form asp-action="Index" method="get" class="mb-3">
-    <div class="form-row">
-        <div class="form-group col-md-3">
-            <label for="categoriaId">Filtrar por Categoría:</label>
-            <select asp-for="CategoriaSeleccionada" asp-items="@(new SelectList(Model.Categorias, "Id", "Nombre"))" class="form-control">
-                <option value="0">Todas las Categorías</option>
-            </select>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="precioMin">Precio Mínimo:</label>
-            <input type="number" asp-for="PrecioMin" class="form-control" placeholder="0.00" />
-        </div>
-        <div class="form-group col-md-2">
-            <label for="precioMax">Precio Máximo:</label>
-            <input type="number" asp-for="PrecioMax" class="form-control" placeholder="0.00" />
-        </div>
-        <div class="form-group col-md-2">
-            <label for="ordenarPor">Ordenar por:</label>
-            <select asp-for="OrdenarPor" class="form-control">
-                <option value="Nombre">Nombre</option>
-                <option value="PrecioAsc">Precio: Menor a Mayor</option>
-                <option value="PrecioDesc">Precio: Mayor a Menor</option>
-            </select>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Filtrar</button>
-</form>
-
-<div class="row">
-    @foreach (var producto in Model.Productos)
-    {
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="@Url.Content("~/imagenes/" + producto.ImagenUrl)" class="card-img-top" alt="Producto">
-                <div class="card-body">
-                    <h5 class="card-title">@producto.Nombre</h5>
-                    <p class="card-text">Categoría: @producto.Categoria.Nombre</p>
-                    <p class="card-text">Precio: @producto.Precio.ToString("C")</p>
-                    <p class="card-text">Stock: @producto.Stock</p>
-                    <p class="card-text">Estado: @(producto.Estado ? "Disponible" : "No disponible")</p>
-                    <p class="card-text">Fecha de creación: @producto.FechaCreacion.ToString("dd/MM/yyyy")</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="@Url.Action("Detalles", "Producto", new { id = producto.Id })" class="btn btn-sm btn-outline-secondary">Ver detalles</a>
-                            <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { id = producto.Id })" class="btn btn-sm btn-outline-primary">Agregar al carrito</a>
-                        </div>
+    <div class="row">
+        <!-- Contenido principal -->
+        <div class="col-md-12">
+            <form asp-action="Index" method="get" class="mb-3">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="CategoriaSeleccionada">Filtrar por Categoría:</label>
+                        <select asp-for="CategoriaSeleccionada" asp-items="@(new SelectList(Model.Categorias, "Id", "Nombre"))" class="form-control">
+                            <option value="0">Todas las Categorías</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="PrecioMin">Precio Mínimo:</label>
+                        <input type="number" asp-for="PrecioMin" class="form-control" placeholder="0.00" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="PrecioMax">Precio Máximo:</label>
+                        <input type="number" asp-for="PrecioMax" class="form-control" placeholder="0.00" />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="OrdenarPor">Ordenar por:</label>
+                        <select asp-for="OrdenarPor" class="form-control">
+                            <option value="Nombre">Nombre</option>
+                            <option value="PrecioAsc">Precio: Menor a Mayor</option>
+                            <option value="PrecioDesc">Precio: Mayor a Menor</option>
+                        </select>
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+            </form>
+
+            <div class="row">
+                @foreach (var producto in Model.Productos)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="@Url.Content("~/imagenes/" + producto.ImagenUrl)" class="card-img-top" alt="@producto.Nombre">
+                            <div class="card-body">
+                                <h5 class="card-title">@producto.Nombre</h5>
+                                <p class="card-text">Precio: @producto.Precio.ToString("C")</p>
+                                <p class="card-text">Stock: @producto.Stock</p>
+                                <p class="card-text">Estado: @(producto.Estado ? "Disponible" : "No disponible")</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <a href="@Url.Action("Detalles", "Producto", new { id = producto.Id })" class="btn btn-sm btn-outline-secondary">Ver detalles</a>
+                                <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { id = producto.Id })" class="btn btn-sm btn-outline-primary">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-    }
+    </div>
 </div>
