@@ -15,6 +15,8 @@ namespace XtremeZone.Data
         public DbSet<ProductoDestacado> ProductosDestacados { get; set; }
         public DbSet<OfertaEspecial> OfertasEspeciales { get; set; }
         public DbSet<Contacto> Contactos { get; set; }
+        public DbSet<Pedido> Pedido{ get; set; }
+        public DbSet<DetallePedido> DetallePedido { get; set; }
 
         //public DbSet<EstadoPedido> EstadoPedidos { get; set; }
         //public DbSet<Pedido> Pedidos { get; set; }

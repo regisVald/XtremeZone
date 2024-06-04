@@ -41,5 +41,7 @@ else
     </table>
     <h3>Total: @Model.Total.ToString("C")</h3>
     <a href="/Producto/Index" class="btn btn-primary">Seguir Comprando</a>
-    <a href="/Compra/Checkout" class="btn btn-success">Proceder al Pago</a>
+    <form method="post" asp-action="ProcesarOrden" class="d-inline">
+        <button type="submit" class="btn btn-success">Proceder al Pago</button>
+    </form>
 }
