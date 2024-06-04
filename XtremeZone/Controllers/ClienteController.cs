@@ -16,6 +16,7 @@ namespace XtremeZone.Controllers
         {
             _context = context;
         }
+
         public IActionResult Crear()
         {
             return View();
@@ -40,8 +41,6 @@ namespace XtremeZone.Controllers
             return View();
         }
 
-
-        // POST: /Cliente/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(string correo, string contrasenia)
@@ -62,7 +61,7 @@ namespace XtremeZone.Controllers
                     new ClaimsPrincipal(claimsIdentity),
                     authProperties).Wait();
 
-                return RedirectToAction("Index","Producto");
+                return RedirectToAction("Index", "Producto");
             }
             else
             {
@@ -70,6 +69,7 @@ namespace XtremeZone.Controllers
                 return View();
             }
         }
+
         public IActionResult Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme).Wait();

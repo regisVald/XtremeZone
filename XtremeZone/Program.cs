@@ -41,11 +41,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Ensure session and authentication are used in the correct order
+app.UseSession();
+
 app.UseAuthentication();
 app.UseAuthorization();
-
-// Use session
-app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
