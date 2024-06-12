@@ -51,7 +51,6 @@
                                 <p class="card-text">Estado: @(producto.Estado ? "Disponible" : "No disponible")</p>
                             </div>
                             <div class="card-footer d-flex justify-content-between">
-                                <a href="@Url.Action("Detalles", "Producto", new { id = producto.Id })" class="btn btn-sm btn-outline-secondary">Ver detalles</a>
                                 <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { id = producto.Id })" class="btn btn-sm btn-outline-primary">Agregar al carrito</a>
                             </div>
                         </div>

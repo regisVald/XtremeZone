@@ -2,5 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <NameOfLastUsedPublishProfile>C:\Users\DBA Gerson Escobar\Documents\XtremeZone\XtremeZone\Properties\PublishProfiles\XtremeZone20240603223758 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>https</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
